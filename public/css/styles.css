@@ -464,3 +464,31 @@ p {
     }
 }
 
+@media (max-width: 550px) {
+    .thank-you-container {
+        padding: 20px 15px;
+        max-width: 90%;    /* Slightly reduced for better margins */
+    }
+
+    .icon-container {
+        width: 100px;       /* Icon size adjusted for smaller devices */
+        height: 100px;      
+    }
+
+    .checkmark {
+        font-size: 2.5rem;  /* Reduced size for the checkmark */
+    }
+
+    h1 {
+        font-size: 1.8rem;  /* Adjusted heading size for readability */
+    }
+
+    p {
+        font-size: 1.2rem;  /* Slightly smaller paragraph font */
+    }
+
+    .home-link {
+        padding: 10px 40px;  /* Adjusted padding for the link */
+        font-size: 1.1rem;   /* Slightly smaller font for the link */
+    }
+}
