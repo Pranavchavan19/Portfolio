@@ -11,6 +11,9 @@ const transporter = nodemailer.createTransport({
         rejectUnauthorized: false,  // Allow self-signed certificates (for dev only)
     }
 });
+app.get('/thank-you', (req, res) => {
+    res.sendFile(__dirname + '/public/thank-you.html'); // Assuming your HTML is in the /public folder
+});
 
 // Define the serverless function
 module.exports = async (req, res) => {
@@ -32,7 +35,7 @@ module.exports = async (req, res) => {
             console.log('Email sent:', info.response);
 
             // Redirect to thank you page
-            res.redirect(302, '/thank-you.html');
+            res.redirect(302, '/thank-you');
         } catch (error) {
             console.error('Error sending email:', error);
             res.status(500).send('Error sending email.');
