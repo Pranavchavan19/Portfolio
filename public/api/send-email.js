@@ -32,7 +32,7 @@ module.exports = async (req, res) => {
             console.log('Email sent:', info.response);
 
             // Redirect to thank you page
-            res.redirect(302, '/thank-you');
+            res.redirect(302, '/thank-you.html');
         } catch (error) {
             console.error('Error sending email:', error);
             res.status(500).send('Error sending email.');
