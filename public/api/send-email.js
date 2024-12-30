@@ -1,5 +1,24 @@
 const nodemailer = require('nodemailer');
 
+
+
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const path = require('path');
+
+
+
+// Middleware to parse form data
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Serve static files (index.html, CSS, JS)
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/thank-you', (req, res) => {
+    res.sendFile(__dirname + '/public/thank-you.html'); // Assuming your HTML is in the /public folder
+});
+
 // Create a Nodemailer transporter (Gmail example)
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -11,9 +30,7 @@ const transporter = nodemailer.createTransport({
         rejectUnauthorized: false,  // Allow self-signed certificates (for dev only)
     }
 });
-app.get('/thank-you', (req, res) => {
-    res.sendFile(__dirname + '/public/thank-you.html'); // Assuming your HTML is in the /public folder
-});
+
 
 // Define the serverless function
 module.exports = async (req, res) => {
