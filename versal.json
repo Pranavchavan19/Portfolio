@@ -1,6 +1,25 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "server.js" }
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/send-email.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/send-email",
+        "methods": ["POST"],
+        "dest": "/api/send-email.js"
+      },
+      {
+        "src": "/thank-you.html",
+        "dest": "/public/thank-you.html"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/public/$1"
+      }
     ]
   }
   

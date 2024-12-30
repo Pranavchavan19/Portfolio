@@ -1,49 +1,27 @@
 const nodemailer = require('nodemailer');
 
-
-
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const path = require('path');
-
-
-
-// Middleware to parse form data
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-// Serve static files (index.html, CSS, JS)
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/thank-you', (req, res) => {
-    res.sendFile(__dirname + '/public/thank-you.html'); // Assuming your HTML is in the /public folder
-});
-
-// Create a Nodemailer transporter (Gmail example)
+// Create a Nodemailer transporter
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'pranav1952000@gmail.com',  // Your Gmail address
+        user: 'pranav1952000@gmail.com', // Your Gmail address
         pass: 'mixd gchk opcy zdtc',     // Your Gmail App Password (ensure it's correct)
     },
     tls: {
-        rejectUnauthorized: false,  // Allow self-signed certificates (for dev only)
+        rejectUnauthorized: false, // Allow self-signed certificates (for dev only)
     }
 });
 
-
-// Define the serverless function
 module.exports = async (req, res) => {
     if (req.method === 'POST') {
-        // Extract the form data
         const { name, email, subject, message } = req.body;
 
-        // Setup email details
+        // Set up email details
         const mailOptions = {
-            from: email,
-            to: 'pranav1952000@gmail.com',  // Where the email is sent
+            from: email,  // Email provided by the user
+            to: 'pranav1952000@gmail.com', // Email to receive the message
             subject: subject || 'Contact Form Submission',
-            text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+            text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // Email body
         };
 
         try {
@@ -51,8 +29,8 @@ module.exports = async (req, res) => {
             const info = await transporter.sendMail(mailOptions);
             console.log('Email sent:', info.response);
 
-            // Redirect to thank you page
-            res.redirect(302, '/thank-you');
+            // Redirect to thank-you page
+            res.redirect(302, '/thank-you.html'); // Redirect to thank-you.html
         } catch (error) {
             console.error('Error sending email:', error);
             res.status(500).send('Error sending email.');
