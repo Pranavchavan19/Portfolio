@@ -262,6 +262,7 @@ p {
     font-size: 4rem;
     font-weight: bold;
     animation: popIn 0.6s ease-out;
+    transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
 .thank-you-container:before,
@@ -414,7 +415,8 @@ p {
     }
 
     .checkmark {
-        font-size: 2rem;
+        font-size: 2.5rem;  /* Further reduce the size for small screens */
+        transform: scale(1);  /* Ensure it scales properly on small screens */
     }
 
     h1 {
@@ -444,7 +446,8 @@ p {
     }
 
     .checkmark {
-        font-size: 2.5rem;  /* Reduced size for the checkmark */
+        font-size: 3rem;  /* Adjust the size for mobile view */
+        transform: scale(1.2);  /* Slightly increase the size for emphasis */
     }
 
     h1 {
