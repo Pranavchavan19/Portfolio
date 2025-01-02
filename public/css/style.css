@@ -462,6 +462,7 @@ body {
   object-fit: cover;
 }
 
+
 .tab-content:not(.active) { display: none;}
 /*-----------------------------------*\
   #COMPONENT
