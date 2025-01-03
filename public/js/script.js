@@ -65,3 +65,13 @@ colorChangingText.addEventListener('click', () => {
     htmlElement.setAttribute('background-image', 'dark');
   }
 });
+
+
+
+document.querySelector('.textarea').addEventListener('click', function (event) {
+  // Prevent default cursor placement
+  event.preventDefault();
+  // Focus the textarea and set the cursor at the start
+  this.focus();
+  this.setSelectionRange(0, 0); // Ensure the cursor is always at the start
+});

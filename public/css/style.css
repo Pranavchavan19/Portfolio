@@ -601,6 +601,10 @@ body {
 .textarea {
   height: 120px;
   padding: 16px;
+  vertical-align: top; /* Ensures the cursor starts at the top */
+  text-align: left; /* Ensures text starts from the left */
+  resize: none;
+  line-height: 1.5; /* Optional */
 }
 :where(.input-field, .textarea)::placeholder { color: var(--on-surface-variant);}
 :where(.input-field, .textarea):focus { box-shadow: inset 0 0 0 2px var(--primary);}
