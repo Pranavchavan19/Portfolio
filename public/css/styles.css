@@ -410,12 +410,12 @@ p {
     }
 
     .icon-container {
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
     }
 
     .checkmark {
-        font-size: 2rem;  /* Further reduce the size for small screens */
+        font-size: 0.6rem;  /* Further reduce the size for small screens */
         transform: scale(1);  /* Ensure it scales properly on small screens */
     }
 
@@ -446,7 +446,7 @@ p {
     }
 
     .checkmark {
-        font-size: 1rem;  /* Adjust the size for mobile view */
+        font-size: 0.7rem;  /* Adjust the size for mobile view */
         transform: scale(1);  /* Slightly increase the size for emphasis */
     }
 
@@ -476,8 +476,8 @@ p {
     }
 
     .checkmark {
-        font-size: 2rem;  /* Reduced size for the checkmark */
-        transform: scale(1.2);  /* Slightly increase the size for emphasis */
+        font-size: 1rem;  /* Reduced size for the checkmark */
+        transform: scale(1);  /* Slightly increase the size for emphasis */
     }
 
     h1 {
