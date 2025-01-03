@@ -441,13 +441,13 @@ p {
     }
 
     .icon-container {
-        width: 100px;       /* Icon size adjusted for smaller devices */
-        height: 100px;      
+        width: 50px;       /* Icon size adjusted for smaller devices */
+        height: 50px;      
     }
 
     .checkmark {
-        font-size: 2.5rem;  /* Adjust the size for mobile view */
-        transform: scale(1.2);  /* Slightly increase the size for emphasis */
+        font-size: 1rem;  /* Adjust the size for mobile view */
+        transform: scale(1);  /* Slightly increase the size for emphasis */
     }
 
     h1 {
@@ -471,12 +471,12 @@ p {
     }
 
     .icon-container {
-        width: 100px;       /* Icon size adjusted for smaller devices */
-        height: 100px;      
+        width: 60px;       /* Icon size adjusted for smaller devices */
+        height: 60px;      
     }
 
     .checkmark {
-        font-size: 2.5rem;  /* Reduced size for the checkmark */
+        font-size: 2rem;  /* Reduced size for the checkmark */
         transform: scale(1.2);  /* Slightly increase the size for emphasis */
     }
 
