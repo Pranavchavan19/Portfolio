@@ -415,7 +415,7 @@ p {
     }
 
     .checkmark {
-        font-size: 0.6rem;  /* Further reduce the size for small screens */
+        font-size: 0.8rem;  /* Further reduce the size for small screens */
         transform: scale(1);  /* Ensure it scales properly on small screens */
     }
 
@@ -446,7 +446,7 @@ p {
     }
 
     .checkmark {
-        font-size: 0.7rem;  /* Adjust the size for mobile view */
+        font-size: 0.9rem;  /* Adjust the size for mobile view */
         transform: scale(1);  /* Slightly increase the size for emphasis */
     }
 
