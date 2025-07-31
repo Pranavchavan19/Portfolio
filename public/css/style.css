@@ -777,6 +777,9 @@ gap: 12px;
   margin-block-end: 16px;
 }
 
+.pro.h1{
+  text-color: green;
+}
 
 /*-----------------------------------*\
   #CONTACT
